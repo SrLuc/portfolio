@@ -4,15 +4,18 @@ import { device } from "../Library/deviceSizes";
 const MainContainer = styled.section`
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   width: 65%;
+  height: 100vh;
 
   header {
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: 20px;
 
     @media ${device.desktop} {
-      font-size: 60px;
+      font-size: 35px;
     }
 
     @media ${device.tablet} {
@@ -20,7 +23,7 @@ const MainContainer = styled.section`
     }
 
     @media ${device.mobile} {
-      font-size: 35px;
+      font-size: 20px;
     }
   }
 
@@ -28,11 +31,12 @@ const MainContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    padding: 10px 20px;
 
     div {
       background-color: pink;
       width: 70%;
-      height: 250px;
+      height: 300px;
 
       @media ${device.tablet} {
         width: 100%;
@@ -53,13 +57,13 @@ const MainContainer = styled.section`
     article {
       background-color: yellow;
       width: 25%;
-      height: 250px;
+      height: 300px;
     }
 
     section {
       width: 75%;
       display: flex;
-      height: 250px;
+      height: 300px;
 
       nav {
         width: 50%;
@@ -129,7 +133,6 @@ const MainContainer = styled.section`
       }
     }
   }
-  
 `;
 
 interface MainProps {}

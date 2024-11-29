@@ -8,13 +8,13 @@ const StyledCard = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   width: 35%;
-  height: 100%;
   margin: 20px;
+  height: 100%;
 
   div {
-    text-align: center;
+    text-align: left;
     img {
-      width: 95%;
+      width: 100%;
     }
   }
 
@@ -28,7 +28,9 @@ const StyledCard = styled.div`
 
   @media ${device.tablet} {
     width: 85%;
-    text-align: center;
+    div {
+      text-align: center;
+    }
     img {
       width: 100%;
     }
@@ -43,7 +45,18 @@ const StyledCard = styled.div`
 
   @media ${device.mobile} {
     width: 85%;
-    text-align: center;
+    div {
+      text-align: center;
+    }
+    img {
+      width: 100%;
+    }
+    span {
+      text-align: center;
+      img {
+        width: 50%;
+      }
+    }
   }
 `;
 
