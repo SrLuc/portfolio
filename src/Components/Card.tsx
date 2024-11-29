@@ -1,13 +1,32 @@
 import styled from "styled-components";
+import Me from "../assets/Me.png";
+import NAUR from "../assets/NAUR.png";
 
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 35%;
   height: 100vh;
   padding: 10px;
+
+  div {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  section {
+    @media (max-width: 768px) {
+      display:flex;
+      justify-content: center;
+    }
+    img {
+      width: 60%;
+      object-fit: cover;
+    }
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -20,16 +39,15 @@ const Card = ({}: CardProps) => {
   return (
     <StyledCard>
       <div>
-        imagem
-        <img src="" alt="" />
+        <img src={Me} alt="Me" />
       </div>
-      <h1>Hello</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum odio
-        placeat architecto quasi eligendi! Doloribus velit dicta quisquam
-        ducimus quas culpa aperiam asperiores tempore ea! Cupiditate ab minima
-        recusandae voluptatum.
-      </p>
+      <section>
+        <img src={NAUR} alt="" />
+      </section>
+      <div>
+        <h5>ruanlucenaramos@gmail.com</h5>
+        <p>-------------------------------</p>
+      </div>
     </StyledCard>
   );
 };
