@@ -1,100 +1,135 @@
 import styled from "styled-components";
-  
+import { device } from "../Library/deviceSizes";
+
 const MainContainer = styled.section`
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  width: 65%;
 
   header {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    h1 {
-      font-size: 75px;
+    @media ${device.desktop} {
+      font-size: 60px;
+    }
+
+    @media ${device.tablet} {
+      font-size: 40px;
+    }
+
+    @media ${device.mobile} {
+      font-size: 35px;
     }
   }
 
-  article {
+  main {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
-    gap: 30px;
-    margin-bottom: 20px;
 
     div {
+      background-color: pink;
       width: 70%;
-      height: 40vh;
-      border: 1px solid black;
-      border-radius: 30px;
+      height: 250px;
+
+      @media ${device.tablet} {
+        width: 100%;
+      }
     }
 
     aside {
-      width: 25%;
-      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      width: 30%;
 
       span {
-        width: 100%;
+        background-color: blue;
         height: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 40px;
-        border: 1px solid black;
-        border-radius: 30px 30px 0 0;
-      }
-
-      div {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 40px;
-        border: 1px solid black;
-        border-radius: 0 0 30px 30px;
       }
     }
-  }
 
-  footer {
-    width: 100%;
-    gap: 50px;
-    height: 33vh;
-    display: flex;
-    justify-content: space-around;
-
-    span {
-      width: 30%;
-      border: 1px solid black;
-      border-radius: 30px;
+    article {
+      background-color: yellow;
+      width: 25%;
+      height: 250px;
     }
 
     section {
-      width: 65%;
+      width: 75%;
       display: flex;
+      height: 250px;
 
-      div {
-        width: 55%;
-        border: 1px solid black;
-        border-radius: 30px 0 0 30px;
+      nav {
+        width: 50%;
+        background-color: green;
       }
-
       form {
         width: 50%;
-        border: 1px solid black;
-        border-radius: 30px 30px 30px 0;
-        margin-left: -30px; /* Remove a lacuna entre a borda da div e do form */
-        background-color: white;
+        background-color: orange;
       }
     }
   }
+
+  @media ${device.tablet} {
+    width: 100%;
+
+    main {
+      //pictures
+      div {
+        width: 100%;
+      }
+
+      //gituhub
+      aside {
+        width: 40%;
+        order: 3;
+      }
+
+      //soundcloud
+      article {
+        width: 60%;
+        order: 2;
+      }
+
+      //linkedin
+      section {
+        width: 100%;
+        order: 4;
+      }
+    }
+  }
+
+  @media ${device.mobile} {
+    width: 100%;
+
+    main {
+      //pictures
+      div {
+        width: 100%;
+      }
+
+      //gituhub
+      aside {
+        width: 40%;
+        order: 3;
+      }
+
+      //soundcloud
+      article {
+        width: 60%;
+        order: 2;
+      }
+
+      //linkedin
+      section {
+        width: 100%;
+        order: 4;
+      }
+    }
+  }
+  
 `;
 
 interface MainProps {}
@@ -105,20 +140,18 @@ const Main = ({}: MainProps) => {
       <header>
         <h1>PORTFOLIO</h1>
       </header>
-      <article>
+      <main>
         <div>images</div>
         <aside>
           <span>1</span>
-          <div>2</div>
+          <span>2</span>
         </aside>
-      </article>
-      <footer>
-        <span>soundcloud</span>
+        <article>soundcloud</article>
         <section>
-          <div>linkedin</div>
+          <nav>linkedin</nav>
           <form>form modal</form>
         </section>
-      </footer>
+      </main>
     </MainContainer>
   );
 };

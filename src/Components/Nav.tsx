@@ -6,10 +6,12 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+
   ul {
     display: flex;
-    gap: 4.5rem;
+    gap: 4rem;
     list-style: none;
+    
   }
 
   li {
@@ -23,7 +25,7 @@ const StyledNav = styled.nav`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: none;
   }
 `;

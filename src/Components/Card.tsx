@@ -1,35 +1,49 @@
 import styled from "styled-components";
 import Me from "../assets/Me.png";
 import NAUR from "../assets/NAUR.png";
+import { device } from "../Library/deviceSizes";
 
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 35%;
-  height: 100vh;
-  padding: 10px;
+  height: 100%;
+  margin: 20px;
 
   div {
+    text-align: center;
+    img {
+      width: 95%;
+    }
+  }
+
+  span {
+    padding: 10px;
+
+    img {
+      width: 40%;
+    }
+  }
+
+  @media ${device.tablet} {
+    width: 85%;
+    text-align: center;
     img {
       width: 100%;
-      object-fit: cover;
+    }
+
+    span {
+      text-align: center;
+      img {
+        width: 30%;
+      }
     }
   }
 
-  section {
-    @media (max-width: 768px) {
-      display:flex;
-      justify-content: center;
-    }
-    img {
-      width: 60%;
-      object-fit: cover;
-    }
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
+  @media ${device.mobile} {
+    width: 85%;
+    text-align: center;
   }
 `;
 
@@ -41,12 +55,13 @@ const Card = ({}: CardProps) => {
       <div>
         <img src={Me} alt="Me" />
       </div>
-      <section>
-        <img src={NAUR} alt="" />
-      </section>
+      <span>
+        <img src={NAUR} alt="NAUR" />
+      </span>
       <div>
-        <h5>ruanlucenaramos@gmail.com</h5>
-        <p>-------------------------------</p>
+        <p>I'm a software engineer</p>
+        <p>I'm Designer and Photographer as well</p>
+        <p>Contanct Me on ruanlucenaramos@gmail.com</p>
       </div>
     </StyledCard>
   );
