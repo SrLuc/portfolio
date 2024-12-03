@@ -27,7 +27,7 @@ const MainContainer = styled.section`
 
     @media ${device.mobile} {
       font-size: 20px;
-      padding-top: 10px;
+      padding-top:15px;
 
     }
   }
@@ -121,6 +121,7 @@ const MainContainer = styled.section`
       //pictures
       div {
         width: 100%;
+        height: 200px;
       }
 
       //gituhub
@@ -132,14 +133,14 @@ const MainContainer = styled.section`
       //soundcloud
       article {
         width: 60%;
-        height: 250px;
+        height: 200px;
         order: 2;
       }
 
       //linkedin
       section {
         width: 100%;
-        height: 250px;
+        height: 200px;
         order: 4;
       }
     }

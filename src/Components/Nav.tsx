@@ -40,12 +40,12 @@ const StyledNav = styled.nav`
   @media ${device.mobile} {
     width: 100%;
     rotate: 0deg;
-    padding: 11px;
+    padding: 10px;
     display: flex;
     ul {
-      justify-content: space-evenly;
+      justify-content: space-around;
       li {
-        font-size: 11px;
+        font-size: 10px;
       }
     }
   }
