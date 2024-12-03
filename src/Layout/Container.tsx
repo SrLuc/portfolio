@@ -10,10 +10,12 @@ const StyledContainer = styled.div`
 
   @media ${device.tablet} {
     flex-direction: column;
+
   }
 
   @media ${device.mobile} {
     flex-direction: column;
+    
   }
 `;
 

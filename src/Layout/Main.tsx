@@ -7,6 +7,7 @@ const MainContainer = styled.section`
   justify-content: space-evenly;
   width: 65%;
   height: 100vh;
+  background-color: red;
 
   header {
     display: flex;
@@ -16,14 +17,18 @@ const MainContainer = styled.section`
 
     @media ${device.desktop} {
       font-size: 35px;
+      
     }
 
     @media ${device.tablet} {
-      font-size: 40px;
+      font-size: 30px;
+      padding-top: 10px;
     }
 
     @media ${device.mobile} {
       font-size: 20px;
+      padding-top: 10px;
+
     }
   }
 
@@ -83,23 +88,27 @@ const MainContainer = styled.section`
       //pictures
       div {
         width: 100%;
+        height: 230px;
       }
 
       //gituhub
       aside {
         width: 40%;
+        height: 250px;
         order: 3;
       }
 
       //soundcloud
       article {
         width: 60%;
+        height: 250px;
         order: 2;
       }
 
       //linkedin
       section {
         width: 100%;
+        height: 250px;
         order: 4;
       }
     }
@@ -123,12 +132,14 @@ const MainContainer = styled.section`
       //soundcloud
       article {
         width: 60%;
+        height: 250px;
         order: 2;
       }
 
       //linkedin
       section {
         width: 100%;
+        height: 250px;
         order: 4;
       }
     }

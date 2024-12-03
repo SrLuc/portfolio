@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../Library/deviceSizes";
 
 const StyledNav = styled.nav`
   width: 5%;
@@ -6,27 +7,47 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: yellow;
 
   ul {
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
     list-style: none;
-    
   }
 
   li {
     font-size: 20px;
     cursor: pointer;
 
-
-
     @media (max-width: 1324px) {
       font-size: 15px;
     }
   }
 
-  @media (max-width: 900px) {
-    display: none;
+  @media ${device.tablet} {
+    width: 100%;
+    rotate: 0deg;
+    padding: 20px;
+    display: flex;
+    ul {
+      justify-content: space-evenly;
+      li {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media ${device.mobile} {
+    width: 100%;
+    rotate: 0deg;
+    padding: 11px;
+    display: flex;
+    ul {
+      justify-content: space-evenly;
+      li {
+        font-size: 11px;
+      }
+    }
   }
 `;
 

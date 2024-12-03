@@ -8,8 +8,9 @@ const StyledCard = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   width: 35%;
-  margin: 20px;
   height: 100%;
+  background-color: blue;
+  padding: 15px;
 
   div {
     text-align: left;
@@ -19,15 +20,14 @@ const StyledCard = styled.div`
   }
 
   span {
-    padding: 10px;
-
     img {
       width: 40%;
     }
   }
 
   @media ${device.tablet} {
-    width: 85%;
+    order: -1;
+    width: 100%;
     div {
       text-align: center;
     }
@@ -38,13 +38,15 @@ const StyledCard = styled.div`
     span {
       text-align: center;
       img {
-        width: 30%;
+        width: 40%;
       }
     }
   }
 
   @media ${device.mobile} {
-    width: 85%;
+    order: -1;
+
+    width: 100%;
     div {
       text-align: center;
     }
@@ -54,7 +56,7 @@ const StyledCard = styled.div`
     span {
       text-align: center;
       img {
-        width: 50%;
+        width: 40%;
       }
     }
   }
