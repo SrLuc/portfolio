@@ -7,11 +7,14 @@ const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 35%;
-  height: 100%;
-  background-color: blue;
-  padding: 15px;
 
+  width: 35%;
+  height: 90%;
+  padding: 15px;
+  background-color: #F2F1E9;
+
+  border-radius: 20px;
+  
   div {
     text-align: left;
     img {

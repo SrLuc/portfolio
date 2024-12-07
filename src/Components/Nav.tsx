@@ -7,17 +7,21 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: yellow;
 
   ul {
     display: flex;
-    gap: 3rem;
     list-style: none;
+    justify-content:space-between;
   }
 
   li {
+    margin-left: 40px;
     font-size: 20px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #ff0000;
+    }
 
     @media (max-width: 1324px) {
       font-size: 15px;
@@ -45,7 +49,8 @@ const StyledNav = styled.nav`
     ul {
       justify-content: space-around;
       li {
-        font-size: 10px;
+        font-size: 12px;
+        margin: 10px;
       }
     }
   }
