@@ -13,6 +13,7 @@ export const MainContainer = styled.section`
     align-items: center;
     letter-spacing: 20px;
     color: #2c2926;
+    font-family: "Krona One", sans-serif;
 
     @media ${device.desktop} {
       font-size: 50px;
@@ -26,7 +27,7 @@ export const MainContainer = styled.section`
     }
 
     @media ${device.tablet} {
-      font-size: 30px;
+      font-size: 15px;
       padding-top: 10px;
 
       i {

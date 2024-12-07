@@ -11,20 +11,23 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     list-style: none;
-    justify-content:space-between;
+    justify-content: space-between;
   }
 
   li {
-    margin-left: 40px;
-    font-size: 20px;
+    font-family: "Krona One", sans-serif;
+    color: #2c2926;
+    font-size: 15px;
     cursor: pointer;
+
     transition: all 0.3s ease;
     &:hover {
       color: #ff0000;
     }
 
-    @media (max-width: 1324px) {
-      font-size: 15px;
+    @media ${device.desktop} {
+      font-size: 18px;
+      margin: 0 20px;
     }
   }
 
@@ -33,9 +36,11 @@ const StyledNav = styled.nav`
     rotate: 0deg;
     padding: 20px;
     display: flex;
+
     ul {
-      justify-content: space-evenly;
+      flex-wrap: wrap;
       li {
+        margin: 0 20px;
         font-size: 13px;
       }
     }
@@ -47,9 +52,10 @@ const StyledNav = styled.nav`
     padding: 10px;
     display: flex;
     ul {
+      flex-wrap: wrap;
       justify-content: space-around;
       li {
-        font-size: 12px;
+        font-size: 10px;
         margin: 10px;
       }
     }
