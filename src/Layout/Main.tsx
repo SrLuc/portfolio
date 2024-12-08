@@ -1,5 +1,8 @@
 import * as S from "./css/MainStyle";
 import star from "../assets/star.png";
+import soundcloud from "../assets/soundcloud.png";
+import linkedin from "../assets/linkedin.png";
+import chat from "../assets/chat.png";
 
 interface MainProps {}
 
@@ -21,10 +24,16 @@ const Main = ({}: MainProps) => {
           <span>1</span>
           <span>2</span>
         </aside>
-        <article>soundcloud</article>
+        <article>
+          <img src={soundcloud} alt="" />
+        </article>
         <section>
-          <nav>linkedin</nav>
-          <form>form modal</form>
+          <nav>
+            <img src={linkedin} alt="" />
+          </nav>
+          <form>
+            <img src={chat} alt="" />
+          </form>
         </section>
       </main>
     </S.MainContainer>

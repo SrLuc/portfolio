@@ -6,6 +6,7 @@ export const MainContainer = styled.section`
   flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
+  gap: 1;
 
   header {
     display: flex;
@@ -17,7 +18,6 @@ export const MainContainer = styled.section`
 
     @media ${device.desktop} {
       font-size: 50px;
-    
 
       i {
         img {
@@ -51,6 +51,7 @@ export const MainContainer = styled.section`
   }
 
   main {
+    //pictures
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -67,6 +68,7 @@ export const MainContainer = styled.section`
     }
 
     aside {
+      //gituhub
       display: flex;
       flex-direction: column;
       width: 30%;
@@ -78,23 +80,54 @@ export const MainContainer = styled.section`
     }
 
     article {
-      background-color: yellow;
+      //soundcloud
+      
       width: 25%;
       height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        border-radius: 100%;
+        width: 50%;
+        height: 50%;
+      }
     }
 
     section {
+      //linkedin
       width: 75%;
       display: flex;
-      height: 300px;
-
+      justify-content: space-around;
+      margin-top: 25px;
       nav {
-        width: 50%;
-        background-color: green;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        border-radius: 50px;
+        background-color: #DFEBF2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+        img {
+          width: 50%;
+          height: 50%;
+        }
       }
       form {
-        width: 50%;
-        background-color: orange;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        border-radius: 50px;
+        background-color: #F27141;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+        img {
+          
+          width: 50%;
+          height: 50%;
+        }
       }
     }
   }
@@ -121,6 +154,10 @@ export const MainContainer = styled.section`
         width: 60%;
         height: 250px;
         order: 2;
+        img{
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+          border-radius: 100%;
+        }
       }
 
       //linkedin
@@ -128,6 +165,18 @@ export const MainContainer = styled.section`
         width: 100%;
         height: 250px;
         order: 4;
+
+        nav{
+          width: 45%;
+          height: 75%;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        }
+
+        form{
+          width: 45%;
+          height: 75%;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        }
       }
     }
   }
@@ -150,17 +199,25 @@ export const MainContainer = styled.section`
 
       //soundcloud
       article {
-        width: 60%;
-        height: 200px;
+        width: 60%;  
         order: 2;
       }
 
       //linkedin
       section {
         width: 100%;
-        height: 200px;
         order: 4;
+
+        nav{
+          width: 40%;
+          height: 75%;
+        }
+
+        form{
+          width: 40%;
+          height: 75%;  
       }
+    }
     }
   }
 `;
