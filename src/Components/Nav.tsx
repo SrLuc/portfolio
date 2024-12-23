@@ -17,7 +17,7 @@ const StyledNav = styled.nav`
   li {
     font-family: "Krona One", sans-serif;
     color: #2c2926;
-    font-size: 15px;
+    font-size: 12px;
     cursor: pointer;
 
     transition: all 0.3s ease;
@@ -26,7 +26,7 @@ const StyledNav = styled.nav`
     }
 
     @media ${device.desktop} {
-      font-size: 18px;
+      font-size: 12px;
       margin: 0 20px;
     }
   }
@@ -55,7 +55,7 @@ const StyledNav = styled.nav`
       flex-wrap: wrap;
       justify-content: space-around;
       li {
-        font-size: 10px;
+        font-size: 9px;
         margin: 10px;
       }
     }

@@ -11,10 +11,11 @@ const StyledCard = styled.div`
   width: 50%;
   height: 90%;
   padding: 15px;
-  background-color: #F2F1E9;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  border-radius: 50px;
-  
+  //  background-color: #F2F1E9;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border-radius: 50px 50px 0 0;
+
   div {
     text-align: left;
     img {
@@ -28,8 +29,20 @@ const StyledCard = styled.div`
     }
   }
 
+  p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: #333;
+
+    a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+
   @media ${device.tablet} {
-    order: -1;
     width: 100%;
     div {
       text-align: center;
@@ -37,7 +50,6 @@ const StyledCard = styled.div`
     img {
       width: 100%;
     }
-
     span {
       text-align: center;
       img {
@@ -77,9 +89,12 @@ const Card = ({}: CardProps) => {
         <img src={NAUR} alt="NAUR" />
       </span>
       <div>
-        <p>I'm a software engineer</p>
+        <p>Software Engineer</p>
         <p>I'm Designer and Photographer as well</p>
-        <p>Contanct Me on ruanlucenaramos@gmail.com</p>
+        <p>
+          Contact me on
+          <a href=""> ruanlucenaramos@gmail.com</a>
+        </p>
       </div>
     </StyledCard>
   );
